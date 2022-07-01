@@ -4,7 +4,7 @@ from calculator.calc_mod import Calculator
 calculator = Calculator() 
 
 def test_add_simple():
-    calculator.add(3)
+    calculator.add(3) 
     assert calculator.get_current_val() == 3
 
 def test_reset():
