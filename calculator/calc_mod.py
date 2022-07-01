@@ -57,9 +57,11 @@ class Calculator:
     def root(self, n):
         """ Takes the nth root of a number """     
         try:  
+            """ Root procedures with negative number and equal roots does not give a real root
+                Therefore, the assertion error is thrown if user inputs such value. """
             assert self.current_val >= 0 or (self.current_val < 0 and n % 2 != 0)
             negative = False
-            
+
             if self.current_val < 0:
                 negative = True
                 self.current_val *= -1
